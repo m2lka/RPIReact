@@ -1,4 +1,4 @@
-import type { OffersList } from "../../types/offers";
+import type { OffersList } from "../../types/offers.ts";
 import { FavoritesCard } from "../favorite-card/favorite-card.tsx";
 
 type FavoritesCardListProps = {

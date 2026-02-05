@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Map from "../../components/map/map.tsx"
 import type { City, Point } from "../../types/city.ts";
 import { CitiesList } from "../../components/cities-list/cities-list.tsx";
-import { useAppSelector } from "../../hooks";
+import { useAppSelector } from "../../hooks/index.ts";
 import { getOffersByCity, sortOffersByType } from "../../util.ts";
 import type { SortOffer } from "../../types/sort.ts";
 import { SortOptions } from "../../components/sort-options/sort-options.tsx";

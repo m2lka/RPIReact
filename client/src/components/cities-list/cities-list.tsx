@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useAppDispatch } from '../../hooks';
+import { useAppDispatch } from '../../hooks/index.ts';
 
 
 import { changeCity } from "../../store/action.ts";

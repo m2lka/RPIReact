@@ -1,5 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
-import type { OffersList } from '../types/offers';
+import type { OffersList } from '../types/offers.ts';
 import type { City } from "../types/city.ts";
 
 

@@ -6,7 +6,7 @@ import { offers } from "./mocks/offers.ts";
 import { mapFullOffersToOffersList } from "./mocks/offers-list.ts";
 import { reviews } from "./mocks/reviews.ts";
 import { Provider } from "react-redux";
-import { store } from "./store";
+import { store } from "./store/index.ts";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

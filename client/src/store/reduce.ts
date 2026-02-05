@@ -1,7 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { mapFullOffersToOffersList } from '../mocks/offers-list';
+import { mapFullOffersToOffersList } from '../mocks/offers-list.ts';
 
-import { changeCity, offersCityList } from './action';
+import { changeCity, offersCityList } from './action.ts';
 import { offers } from "../mocks/offers.ts";
 import { CITIES_LOCATION } from "../const.ts";
 import { getCity } from "../util.ts";
