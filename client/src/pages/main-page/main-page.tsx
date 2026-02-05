@@ -1,18 +1,24 @@
-import {CitiesCard} from "../../components/cities-card/cities-card.tsx";
+import { CitiesCardList } from "../../components/CitiesCardList/CitiesCardList.tsx";
+import { Logo } from "../../components/logo/logo.tsx";
+import type { OffersList } from "../../types/offers.ts";
 
-type MainPageProps = {rentalOffersCount: number}
+type MainPageProps = {
+    rentalOffersCount: number;
+    offersList: OffersList[];
+}
 
-function MainPage({rentalOffersCount}:MainPageProps) {
+function MainPage({ rentalOffersCount, offersList }: MainPageProps) {
     return (
         <div className="page page--gray page--main">
             <header className="header">
                 <div className="container">
                     <div className="header__wrapper">
                         <div className="header__left">
-                            <a className="header__logo-link header__logo-link--active">
+                            <Logo />
+                            {/* <a className="header__logo-link header__logo-link--active">
                                 <img className="header__logo" src="img/logo.svg" alt="Rent service logo" width="81"
-                                     height="41"/>
-                            </a>
+                                    height="41" />
+                            </a> */}
                         </div>
                         <nav className="header__nav">
                             <ul className="header__nav-list">
@@ -81,11 +87,11 @@ function MainPage({rentalOffersCount}:MainPageProps) {
                             <form className="places__sorting" action="#" method="get">
                                 <span className="places__sorting-caption">Sort by</span>
                                 <span className="places__sorting-type" tabIndex={0}>
-                  Popular
-                  <svg className="places__sorting-arrow" width="7" height="4">
-                    <use href="#icon-arrow-select"></use>
-                  </svg>
-                </span>
+                                    Popular
+                                    <svg className="places__sorting-arrow" width="7" height="4">
+                                        <use href="#icon-arrow-select"></use>
+                                    </svg>
+                                </span>
                                 <ul className="places__options places__options--custom places__options--opened">
                                     <li className="places__option places__option--active" tabIndex={0}>Popular</li>
                                     <li className="places__option" tabIndex={0}>Price: low to high</li>
@@ -94,16 +100,7 @@ function MainPage({rentalOffersCount}:MainPageProps) {
                                 </ul>
                             </form>
                             <div className="cities__places-list places__list tabs__content">
-                                <CitiesCard/>
-
-                                <CitiesCard/>
-
-                                <CitiesCard/>
-
-                                <CitiesCard/>
-
-                                <CitiesCard/>
-
+                                <CitiesCardList offersList={offersList} />
 
                             </div>
                         </section>
@@ -118,4 +115,4 @@ function MainPage({rentalOffersCount}:MainPageProps) {
     );
 }
 
-export {MainPage};
+export { MainPage };
